@@ -1,9 +1,79 @@
 # Haskell
 
 - [Documentation](https://www.haskell.org/documentation/)
-- [Download](https://www.haskell.org/downloads/)
+- [Stack](https://docs.haskellstack.org/en/stable/README/): a cross-platform program for developing Haskell projects
+  - [GitHub](https://github.com/commercialhaskell/stack/)
+
+---
+
+## Contents
+
+1. [Install Stack](#install-stack)
+1. function, list, ranges, tuple
+1. type, type variable, type class
+1. pattern matching, guard, where, let, case
+1. recursion, quicksort
+1. higher-order function, curried function, lambda, fold, $ function application operator, function composition
+1. module
+1. custom type
+1. i/o
+1. functional thinking
+1. applicative functor
+1. monoid
+1. monad
+1. zipper
+
+---
+
+## Install Stack
+
+```bash
+curl -sSL https://get.haskellstack.org/ | sh
+```
+
+WARNING: `$HOME/.local/bin` is not on your PATH:
+
+```bash
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+# echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.zshenv
+```
+
+Version:
+
+```bash
+stack --version
+```
+
+### Start GHCi
+
+`Prelude>` prompt → `λ:`:
+
+```bash
+echo ':set prompt  "\\x03BB: "' >> ~/.ghci
+```
+
+Start GHCi:
+
+```bash
+stack ghci
+λ:
+```
+
+Quit:
+
+```bash
+λ> :help
+λ> :quit
+```
+
+---
 
 ## Links
+
+### Online Resources
+
+- ⭐ **[How to learn Haskell](https://github.com/bitemyapp/learnhaskell)** ⭐
+  - Korean: [하스켈 학습 가이드](https://github.com/bitemyapp/learnhaskell/blob/master/guide-ko.md)
 
 ### Book
 
@@ -16,10 +86,6 @@
 - [University of Virginia’s CS 1501](http://shuklan.com/haskell/)
 - [Stanford’s cs240h](http://www.scs.stanford.edu/14sp-cs240h/)
 - [Hendrix’s CSCI 360](http://ozark.hendrix.edu/~yorgey/360/f16/)
-
-### Online Resources
-
-- [하스켈 학습 가이드](https://github.com/bitemyapp/learnhaskell/blob/master/guide-ko.md)
 
 ### Frameworks
 
