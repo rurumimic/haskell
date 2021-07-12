@@ -8,7 +8,7 @@
 
 ## Contents
 
-1. [Install Stack](#install-stack)
+1. [Install](install.md): stack
 1. function, list, ranges, tuple
 1. type, type variable, type class
 1. pattern matching, guard, where, let, case
@@ -22,49 +22,6 @@
 1. monoid
 1. monad
 1. zipper
-
----
-
-## Install Stack
-
-```bash
-curl -sSL https://get.haskellstack.org/ | sh
-```
-
-WARNING: `$HOME/.local/bin` is not on your PATH:
-
-```bash
-echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
-# echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.zshenv
-```
-
-Version:
-
-```bash
-stack --version
-```
-
-### Start GHCi
-
-`Prelude>` prompt → `λ:`:
-
-```bash
-echo ':set prompt  "\\x03BB: "' >> ~/.ghci
-```
-
-Start GHCi:
-
-```bash
-stack ghci
-λ:
-```
-
-Quit:
-
-```bash
-λ> :help
-λ> :quit
-```
 
 ---
 
