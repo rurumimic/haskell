@@ -6,10 +6,22 @@
 
 ---
 
+## Start GHCi
+
+```haskell
+stack ghci
+
+λ:
+λ: :help
+λ: :quit
+```
+
+---
+
 ## Contents
 
 1. [Install](install.md): stack
-1. function, list, ranges, tuple
+1. [function](docs/function.md), list, ranges, tuple
 1. type, type variable, type class
 1. pattern matching, guard, where, let, case
 1. recursion, quicksort

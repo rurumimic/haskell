@@ -35,6 +35,6 @@ stack ghci
 Quit:
 
 ```bash
-λ> :help
-λ> :quit
+λ: :help
+λ: :quit
 ```
