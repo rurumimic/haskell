@@ -21,7 +21,7 @@ stack ghci
 ## Contents
 
 1. [Install](install.md): stack
-1. [function](docs/function.md), [list](docs/list.md), ranges, tuple
+1. [function](docs/function.md), [list](docs/list.md), [ranges](docs/list.md#ranges), [comprehension](docs/list.md#list-comprehension), [tuple](docs/list.md#tuples)
 1. type, type variable, type class
 1. pattern matching, guard, where, let, case
 1. recursion, quicksort
