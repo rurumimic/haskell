@@ -100,3 +100,54 @@ firstLetter all@(x:xs) = all ++ ": " ++ [x]
 firstLetter "Dracula" -- "Dracula: D"
 firstLetter' "Dracula" -- "Dracula: 'D'"
 ```
+
+## guard
+
+example 1:
+
+```hs
+bmiTell :: (RealFloat a) => a -> String
+bmiTell bmi
+    | bmi <= 18.5 = "Underweight"
+    | bmi <= 25.0 = "Normal weight"
+    | bmi <= 30.0 = "Overweight"
+    | otherwise   = "Whale"
+```
+
+```hs
+bmiTell 20 -- "Normal weight"
+bmiTell 26.5 -- "Overweight"
+bmiTell 500 -- "Whale"
+
+bmiTell' 85 1.90 -- "Normal weight"
+```
+
+example 2:
+
+```hs
+max' :: (Ord a) => a -> a -> a
+max' a b
+    | a <= b = b
+    | otherwise = a
+```
+
+```hs
+max' 3 5 -- 5
+max' 5 3 -- 5
+```
+
+example 3:
+
+```hs
+myCompare :: (Ord a) => a -> a -> Ordering
+a `myCompare` b
+    | a == b = EQ
+    | a <= b = LT
+    | otherwise = GT
+```
+
+```hs
+2 `myCompare` 3 -- LT
+3 `myCompare` 2 -- GT
+3 `myCompare` 3 -- EQ
+```

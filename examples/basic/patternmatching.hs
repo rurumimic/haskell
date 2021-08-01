@@ -50,3 +50,30 @@ firstLetter all@(x:xs) = all ++ ": " ++ [x]
 firstLetter' :: String -> String
 firstLetter' "" = "Empty String"
 firstLetter' all@(x:xs) = all ++ ": " ++ show x
+
+-- gaurd
+
+bmiTell :: (RealFloat a) => a -> String
+bmiTell bmi
+    | bmi <= 18.5 = "Underweight"
+    | bmi <= 25.0 = "Normal weight"
+    | bmi <= 30.0 = "Overweight"
+    | otherwise   = "Whale"
+
+bmiTell' :: (RealFloat a) => a -> a -> String
+bmiTell' weight height
+    | weight / height ^ 2 <= 18.5 = "Underweight"
+    | weight / height ^ 2 <= 25.0 = "Normal weight"
+    | weight / height ^ 2 <= 30.0 = "Overweight"
+    | otherwise                   = "Whale"
+
+max' :: (Ord a) => a -> a -> a
+max' a b
+    | a <= b = b
+    | otherwise = a
+
+myCompare :: (Ord a) => a -> a -> Ordering
+a `myCompare` b
+    | a == b = EQ
+    | a <= b = LT
+    | otherwise = GT
