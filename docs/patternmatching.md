@@ -151,3 +151,80 @@ a `myCompare` b
 3 `myCompare` 2 -- GT
 3 `myCompare` 3 -- EQ
 ```
+
+## where
+
+```hs
+bmiTell'' :: (RealFloat a) => a -> a -> String
+bmiTell'' weight height
+    | bmi <= skinny = "Underweight"
+    | bmi <= normal = "Normal weight"
+    | bmi <= fat    = "Overweight"
+    | otherwise     = "Whale"
+    where bmi = weight / height ^ 2
+          skinny = 18.5
+          normal = 25.0
+          fat = 30.0
+```
+
+with pattern matching:
+
+```hs
+bmiTell''' :: (RealFloat a) => a -> a -> String
+bmiTell''' weight height
+    | bmi <= skinny = "Underweight"
+    | bmi <= normal = "Normal weight"
+    | bmi <= fat    = "Overweight"
+    | otherwise     = "Whale"
+    where bmi = weight / height ^ 2
+          (skinny, normal, fat) = (18.5, 25.0, 30.0)
+```
+
+function parameters:
+
+```hs
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstname
+          (l:_) = lastname
+```
+
+```hs
+initials "Peter" "Parker" -- "P. P."
+```
+
+define function:
+
+```hs
+calcBmis :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis xs = [bmi w h | (w, h) <- xs]
+    where bmi weight height = weight / height ^ 2
+```
+
+```hs
+calcBmis [(80, 1.6), (70, 1.5)] -- [31.249999999999993,31.11111111111111]
+```
+
+global variables:
+
+```hs
+badGreeting :: String
+badGreeting = "Oh! Pfft. It's you."
+
+niceGreeting :: String
+niceGreeting = "Hello! So very nice to see you,"
+
+greet :: String -> String
+greet "Juan" = niceGreeting ++ " Juan!"
+greet "Fernando" = niceGreeting ++ " Fernando!"
+greet name = badGreeting ++ " " ++ name
+```
+
+```hs
+greet "Juan" -- "Hello! So very nice to see you, Juan!"
+greet "Peter" -- "Oh! Pfft. It's you. Peter"
+```
+
+## let
+
+## case

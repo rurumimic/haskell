@@ -23,7 +23,7 @@ stack ghci
 1. [Install](install.md): stack
 1. [function](docs/function.md), [list](docs/list.md), [ranges](docs/list.md#ranges), [comprehension](docs/list.md#list-comprehension), [tuple](docs/list.md#tuples)
 1. [type](docs/type.md), [type variable](docs/type.md#type-variable), [type class](docs/type.md#type-class)
-1. [pattern matching](docs/patternmatching.md), [guard](docs/patternmatching.md#guard), where, let, case
+1. [pattern matching](docs/patternmatching.md), [guard](docs/patternmatching.md#guard), [where](docs/patternmatching.md#where), [let](docs/patternmatching.md#let), [case](docs/patternmatching.md#case)
 1. recursion, quicksort
 1. higher-order function, curried function, lambda, fold, $ function application operator, function composition
 1. module
