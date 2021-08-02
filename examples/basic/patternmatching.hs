@@ -121,3 +121,41 @@ greet :: String -> String
 greet "Juan" = niceGreeting ++ " Juan!"
 greet "Fernando" = niceGreeting ++ " Fernando!"
 greet name = badGreeting ++ " " ++ name
+
+-- let
+
+cylinder :: Double -> Double -> Double
+cylinder r h =
+    let sideArea = 2 * pi * r * h
+        topArea = pi * r ^ 2
+    in sideArea + 2 * topArea
+
+calcBmis' :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis' xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2]
+
+calcBmis'' :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis'' xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2, bmi > fat]
+  where fat = 25.0
+
+-- case
+
+-- L34
+-- head' :: [a] -> a
+-- head' [] = error "Can't call head on an empty list, dummy!"
+-- head' (x:_) = x
+
+head'' :: [a] -> a
+head'' xs = case xs of [] -> error "Can't call head on an empty list, dummy!"
+                       (x:_) -> x
+
+describeList :: [a] -> String
+describeList ls = "The list is " ++ 
+    case ls of [] -> "empty."
+               [x] -> "a singleton list."
+               xs -> "a longer list."
+
+describeList' :: [a] -> String
+describeList' ls = "The list is " ++ what ls
+  where what [] = "empty."
+        what [x] = "a singleton list."
+        what xs = "a longer list."

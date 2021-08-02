@@ -227,4 +227,69 @@ greet "Peter" -- "Oh! Pfft. It's you. Peter"
 
 ## let
 
+```hs
+cylinder :: Double -> Double -> Double
+cylinder r h =
+    let sideArea = 2 * pi * r * h
+        topArea = pi * r ^ 2
+    in sideArea + 2 * topArea
+```
+
+```hs
+4 * (let a = 9 in a + 1) + 2 -- 42
+[let square x = x * x in (square 5, square 3, square 2)] -- [(25,9,4)]
+(let a = 100; b = 200; c = 300 in a*b*c, let foo = "Hey "; bar = "there!" in foo ++ bar) -- (6000000,"Hey there!")
+(let (a,b,c) = (1,2,3) in a+b+c) * 100 -- 600
+```
+
+list comprehension:
+
+```hs
+calcBmis' :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis' xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2]
+
+calcBmis'' :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis'' xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2, bmi > fat]
+  where fat = 25.0
+```
+
+```hs
+calcBmis' [(80, 1.6)] -- [31.249999999999993]
+calcBmis'' [(50, 1.4)] -- [25.510204081632658]
+```
+
+GHCi:
+
+```hs
+let zoot x y z = x * y + z
+zoot 3 9 2 -- 29
+
+let boot x y z = x * y + z in boot 3 4 2 -- 14
+boot -- error: variable not in scope
+```
+
 ## case
+
+```hs
+head' :: [a] -> a
+head' [] = error "Can't call head on an empty list, dummy!"
+head' (x:_) = x
+
+head'' :: [a] -> a
+head'' xs = case xs of [] -> error "Can't call head on an empty list, dummy!"
+                       (x:_) -> x
+```
+
+```hs
+describeList :: [a] -> String
+describeList ls = "The list is " ++
+    case ls of [] -> "empty."
+               [x] -> "a singleton list."
+               xs -> "a longer list."
+
+describeList' :: [a] -> String
+describeList' ls = "The list is " ++ what ls
+  where what [] = "empty."
+        what [x] = "a singleton list."
+        what xs = "a longer list."
+```
