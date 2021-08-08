@@ -1,6 +1,8 @@
 # Haskell
 
 - [Documentation](https://www.haskell.org/documentation/)
+- [Wiki](https://wiki.haskell.org/Haskell)
+  - H-99: [Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
 - [Stack](https://docs.haskellstack.org/en/stable/README/): a cross-platform program for developing Haskell projects
   - [GitHub](https://github.com/commercialhaskell/stack/)
 
@@ -43,10 +45,14 @@ stack ghci
 
 - ⭐ **[How to learn Haskell](https://github.com/bitemyapp/learnhaskell)** ⭐
   - Korean: [하스켈 학습 가이드](https://github.com/bitemyapp/learnhaskell/blob/master/guide-ko.md)
+- [Wikibooks](https://en.wikibooks.org/wiki/Haskell)
 
 ### Book
 
 - [Learn you a Haskell for great good](http://learnyouahaskell.com/chapters)
+- [Programming in Haskell](https://www.cambridge.org/core/books/programming-in-haskell/8FED82E807EF12D390DE0D16FDE217E4) by Graham Hutton
+- [Real World Haskell](http://book.realworldhaskell.org/) by Bryan O'Sullivan, Don Stewart, and John Goerzen
+- [Haskell Book](https://haskellbook.com/) by Christopher Allen, Julie Moronuki
 
 ### Courses
 
