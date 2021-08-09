@@ -27,7 +27,7 @@ stack ghci
 1. [type](docs/type.md), [type variable](docs/type.md#type-variable), [type class](docs/type.md#type-class)
 1. [pattern matching](docs/patternmatching.md), [guard](docs/patternmatching.md#guard), [where](docs/patternmatching.md#where), [let](docs/patternmatching.md#let), [case](docs/patternmatching.md#case)
 1. [recursion](docs/recursion.md), [quicksort](docs/recursion.md#quicksort)
-1. higher-order function, curried function, lambda, fold, $ function application operator, function composition
+1. [higher-order function](docs/higher-order-function.md), [curried function](docs/higher-order-function.md#curried-function), [lambda](docs/higher-order-function.md#lambda), [fold](docs/higher-order-function.md#fold), [$ function application operator](docs/higher-order-function.md#function-application-operator), [function composition](docs/higher-order-function.md#function-composition)
 1. module
 1. custom type
 1. i/o
