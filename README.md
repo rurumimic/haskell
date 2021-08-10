@@ -3,6 +3,7 @@
 - [Documentation](https://www.haskell.org/documentation/)
 - [Wiki](https://wiki.haskell.org/Haskell)
   - H-99: [Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
+- [Hoogle](https://hoogle.haskell.org/): a Haskell API search engine. Search the Haskell libraries.
 - [Stack](https://docs.haskellstack.org/en/stable/README/): a cross-platform program for developing Haskell projects
   - [GitHub](https://github.com/commercialhaskell/stack/)
 
@@ -28,7 +29,7 @@ stack ghci
 1. [pattern matching](docs/patternmatching.md), [guard](docs/patternmatching.md#guard), [where](docs/patternmatching.md#where), [let](docs/patternmatching.md#let), [case](docs/patternmatching.md#case)
 1. [recursion](docs/recursion.md), [quicksort](docs/recursion.md#quicksort)
 1. [higher-order function](docs/higher-order-function.md), [curried function](docs/higher-order-function.md#curried-function), [lambda](docs/higher-order-function.md#lambda), [fold](docs/higher-order-function.md#fold), [$ function application operator](docs/higher-order-function.md#function-application-operator), [function composition](docs/higher-order-function.md#function-composition)
-1. module
+1. [module](docs/module.md)
 1. custom type
 1. i/o
 1. functional thinking
