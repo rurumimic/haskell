@@ -29,6 +29,8 @@ M.filter
 :m + ModuleName1 ModuleName2 ModuleName3
 ```
 
+---
+
 ## Data.List
 
 ```hs
@@ -68,6 +70,39 @@ any (\x -> x > 5 && x < 10) [1,4,11] -- False
 [1,2] `isInfixOf` [1,3,5] -- False
 ```
 
+```hs
+foldl (+) 0 (replicate 100000000 1) -- *** Exception: stack overflow
+foldl' (+) 0 (replicate 100000000 1) -- 100000000
+```
+
+### Find, Maybe, Just
+
+```hs
+Nothing -- Nothing
+Just "apple" -- Just "apple"
+Just 15 -- Just 15
+:t Just "apple" -- Just "apple" :: Maybe [Char]
+:t Just True -- Just True :: Maybe Bool
+```
+
+```hs
+:t find -- find :: Foldable t => (a -> Bool) -> t a -> Maybe a
+```
+
+```hs
+find (> 4) [1,2,3,4,5,6,7] -- Just 5
+find odd [2,4,6,8,9] -- Just 9
+find (== 'z') "abcde" -- Nothing
+```
+
+```hs
+firstTo40 -- Just 49999
+firstTo 27 -- Just 999
+firstTo 1 -- Just 1
+firstTo 0 -- stack overflow
+firstTo 13 -- Just 49
+```
+
 ## Data.Char
 
 ```hs
@@ -86,4 +121,18 @@ encode 1 "to party hard" -- "up!qbsuz!ibse"
 
 decode 3 "kh|#pdun" -- "hey mark"
 decode 1 "up!qbsuz!ibse" -- "to party hard"
+```
+
+```hs
+digitToInt '2' -- 2
+digitToInt 'F' -- 15
+digitToInt 'z' -- *** Exception: Char.digitToInt: not a digit 'z'
+```
+
+---
+
+## Association list
+
+```hs
+
 ```
