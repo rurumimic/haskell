@@ -135,7 +135,7 @@ digitToInt 'z' -- *** Exception: Char.digitToInt: not a digit 'z'
 
 ```hs
 phoneBook = [
-  wendybetty"phoneBook ,"555-2938"), --
+  ("betty","555-2938"),
   ("betty","342-2492"),
   ("bonnie","452-2928"),
   ("patsy","493-2928"),
@@ -155,21 +155,22 @@ findKey :: (Eq k) => k -> [(k, v)] -> [(k, v)]
 findKey key xs = filter (\(k, v) -> key == k) $ xs
 
 findKey "betty" phoneBook -- [("betty","555-2938"),("betty","342-2492")]
-```wendy "betty" phoneBook --
+```
 
 ```hs
 findKey :: (Eq k) => k -> [(k, v)] -> (k, v)
 findKey key xs = snd . head . filter (\(k, v) -> key == k) $ xs
+
 findKey "betty" phoneBook -- ("betty","555-2938")
-```wendy "betty" phoneBook --
+```
 
 ```hs
 findKey :: (Eq k) => k -> [(k, v)] -> v
 findKey key xs = snd . head . filter (\(k, v) -> key == k) $ xs
 
 findKey "betty" phoneBook -- "555-2938"
-findKey "alice" wendy "betty" phoneBook -- "*** Exception: Prelude.head: empty list --
-```wendy "alice" phoneBook --
+findKey "alice" phoneBook -- "*** Exception: Prelude.head: empty list --
+```
 
 ```hs
 findKey' :: (Eq k) => k -> [(k, v)] -> Maybe v
@@ -179,16 +180,16 @@ findKey' key ((k,v):xs)
     | otherwise = findKey' key xs
 
 findKey' "betty" phoneBook -- Just "555-2938"
-findKey' "alice" wendy' "betty" phoneBook -- Nothing --
-```wendy' "alice" phoneBook --
+findKey' "alice" phoneBook -- Nothing
+```
 
 ```hs
 findKey'' :: (Eq k) => k -> [(k, v)] -> Maybe v
 findKey'' key xs = foldr (\(k, v) acc -> if key == k then Just v else acc) Nothing xs
 
 findKey'' "betty" phoneBook -- Just "555-2938"
-findKey'' "alice" phoneBookfindKeywendy "betty" phoneBook -- Nothing --
-```findKeywendy "alice" phoneBook --
+findKey'' "alice" phoneBook -- Nothing
+```
 
 ### Data.Map
 
@@ -207,9 +208,9 @@ Map.fromList [("MS",1),("MS",2),("MS",3)]
 ```
 
 ```hs
-phoneBook' :: Map.Map wendy String --
-phoneBook'phoneBook' = Map.fromList $ [
-  wendybetty"phoneBook',"555-2938"), --
+phoneBook' :: Map.Map String String
+phoneBook' = Map.fromList $ [
+  ("betty","555-2938"),
   ("betty","342-2492"),
   ("bonnie","452-2928"),
   ("patsy","493-2928"),
@@ -225,25 +226,25 @@ phoneBook'phoneBook' = Map.fromList $ [
 ````hs
 :t Map.lookup -- Map.lookup :: Ord k => k -> Map.Map k a -> Maybe a
 Map.lookup "betty" phoneBook' -- Just "342-2492"
-Map.lookup "alice" phoneBookMap.wendy "betty" phoneBook' -- Nothing --
-```Map.wendy "alice" phoneBook --
+Map.lookup "alice" phoneBook' -- Nothing
+```
 
 ```hs
 :t Map.insert -- Map.insert :: Ord k => k -> a -> Map.Map k a -> Map.Map k a
 let newBook = Map.insert "alice" "123-4567" phoneBook'
-Map.lookup "alice" newBook -- Just "123-4567"let newBook = Map.insert "alice" "wendy-4567" phoneBook --
+Map.lookup "alice" newBook -- Just "123-4567"
 ````
 
 ```hs
 :t Map.size -- Map.size :: Map.Map k a -> Int
 Map.size phoneBook' -- 6
-Map.size newBook -wendy.size phoneBook- 7 --
+Map.size newBook -- 7
 ```
 
 ```hs
 string2digits "123-4567" -- [1,2,3,4,5,6,7]
 let intBook = Map.map string2digits phoneBook'
-:t intBook -- intBook :: Map.Map String [Int]let intBook = wendy.map string2digits phoneBook --
+:t intBook -- intBook :: Map.Map String [Int]
 Map.lookup "betty" intBook -- Just [3,4,2,2,4,9,2]
 ```
 
@@ -266,4 +267,48 @@ Map.lookup "patsy" $ phoneBookToMap' phoneBook -- Just ["827-9162","943-2929","4
 ```hs
 Map.fromListWith max [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)] -- fromList [(2,100),(3,29),(4,22)]
 Map.fromListWith (+) [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)] -- fromList [(2,108),(3,62),(4,37)]
+```
+
+---
+
+## Export
+
+in `modules/Geometry/`
+
+- code: [Geometry](../examples/modules/Geometry.hs)
+- example: import [Geometry](../examples/modules/import_geometry.hs)
+
+```hs
+:l import_geometry.hs
+
+[1 of 2] Compiling Geometry         ( Geometry.hs, interpreted )
+[2 of 2] Compiling Main             ( import_geometry.hs, interpreted )
+Ok, two modules loaded.
+```
+
+```hs
+sphere -- 113.097336
+cuboid -- 52.0
+cube -- 54.0
+```
+
+### Sub-modules
+
+- code: [Sphere](../examples/modules/Geometry/Sphere.hs), [Cuboid](../examples/modules/Geometry/Cuboid.hs), [Cube](../examples/modules/Geometry/Cube.hs)
+- example: import [modules](../examples/modules/import_modules.hs)
+
+```hs
+:l import_modules.hs
+
+[1 of 4] Compiling Geometry.Cuboid  ( Geometry/Cuboid.hs, interpreted )
+[2 of 4] Compiling Geometry.Cube    ( Geometry/Cube.hs, interpreted )
+[3 of 4] Compiling Geometry.Sphere  ( Geometry/Sphere.hs, interpreted )
+[4 of 4] Compiling Main             ( import_modules.hs, interpreted )
+Ok, four modules loaded.
+```
+
+```hs
+sphere -- 113.097336
+cuboid -- 52.0
+cube -- 54.0
 ```
