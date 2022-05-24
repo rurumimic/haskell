@@ -47,6 +47,7 @@ stack ghci
 - ⭐ **[How to learn Haskell](https://github.com/bitemyapp/learnhaskell)** ⭐
   - Korean: [하스켈 학습 가이드](https://github.com/bitemyapp/learnhaskell/blob/master/guide-ko.md)
 - [Wikibooks](https://en.wikibooks.org/wiki/Haskell)
+  - Korean: [Wikibooks](https://wikidocs.net/book/204)
 
 ### Book
 
