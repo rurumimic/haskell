@@ -5,7 +5,7 @@ Haskell has type inferences.
 - `:t`
 - `::` is read as "has type of"
 
-code: [type.hs](../examples/basic/type.hs)
+code: [type.hs](../src/basic/type.hs)
 
 ```hs
 :l type.hs

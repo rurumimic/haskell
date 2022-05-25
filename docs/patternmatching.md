@@ -1,6 +1,6 @@
 # Pattern Matching
 
-code: [patternmatching.hs](../examples/basic/patternmatching.hs)
+code: [patternmatching.hs](../src/basic/patternmatching.hs)
 
 ```hs
 :l patternmatching.hs

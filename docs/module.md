@@ -3,7 +3,7 @@
 - module: a collection of related functions, types and typeclasses
 - program: a collection of modules
 
-code: [module](../examples/basic/module.hs)
+code: [module](../src/basic/module.hs)
 
 ## Import
 
@@ -275,8 +275,8 @@ Map.fromListWith (+) [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)] --
 
 in `modules/Geometry/`
 
-- code: [Geometry](../examples/modules/Geometry.hs)
-- example: import [Geometry](../examples/modules/import_geometry.hs)
+- code: [Geometry](../src/modules/Geometry.hs)
+- example: import [Geometry](../src/modules/import_geometry.hs)
 
 ```hs
 :l import_geometry.hs
@@ -294,8 +294,8 @@ cube -- 54.0
 
 ### Sub-modules
 
-- code: [Sphere](../examples/modules/Geometry/Sphere.hs), [Cuboid](../examples/modules/Geometry/Cuboid.hs), [Cube](../examples/modules/Geometry/Cube.hs)
-- example: import [modules](../examples/modules/import_modules.hs)
+- code: [Sphere](../src/modules/Geometry/Sphere.hs), [Cuboid](../src/modules/Geometry/Cuboid.hs), [Cube](../src/modules/Geometry/Cube.hs)
+- example: import [modules](../src/modules/import_modules.hs)
 
 ```hs
 :l import_modules.hs

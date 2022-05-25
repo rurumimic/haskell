@@ -62,7 +62,7 @@ max :: Ord a => a -> a -> a
 
 ## Function Definition
 
-code: [baby.hs](../examples/basic/baby.hs)
+code: [baby.hs](../src/basic/baby.hs)
 
 ```hs
 doubleMe x = x + x

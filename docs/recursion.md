@@ -1,6 +1,6 @@
 # Recursion
 
-code: [recursion.hs](../examples/basic/recursion.hs)
+code: [recursion.hs](../src/basic/recursion.hs)
 
 ```hs
 maximum' :: (Ord a) => [a] -> a
