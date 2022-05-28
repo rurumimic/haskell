@@ -48,6 +48,7 @@ stack ghci
   - Korean: [하스켈 학습 가이드](https://github.com/bitemyapp/learnhaskell/blob/master/guide-ko.md)
 - [Wikibooks](https://en.wikibooks.org/wiki/Haskell)
   - Korean: [Wikibooks](https://wikidocs.net/book/204)
+- archive: [lens over tea](https://web.archive.org/web/20210513212358mp_/https://artyom.me/#lens-over-tea)
 
 ### Book
 
