@@ -140,7 +140,7 @@ replicate 3 10 -- [10,10,10]
 **set comprehensions**:
 
 ```math
-\left { 2 \cdot x \mid x \in N, x \leq 10 \right }
+\left \{ 2 \cdot x \mid x \in N, x \leq 10 \right \}
 ```
 
 **haskell**:
