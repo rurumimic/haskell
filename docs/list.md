@@ -49,13 +49,13 @@ b !! 2 -- [5,6,7]
 ## Compare
 
 ```hs
-[] < [1]
-[1] < [1,2]
+[] < [1] -- True
+[1] < [1,2] -- True
 
-[1,2] < [1,3]
-[1,3,5] < [3]
+[1,2] < [1,3] -- True
+[1,3,5] < [3] -- True
 
-[1,3,5] == [1.0,3.0,5.0]
+[1,3,5] == [1.0,3.0,5.0] -- True
 ```
 
 ## Operator
@@ -139,7 +139,9 @@ replicate 3 10 -- [10,10,10]
 
 **set comprehensions**:
 
-![\left { 2 \cdot x \mid x \in N, x \leq 10 \right }](https://latex.codecogs.com/svg.latex?%5Clarge%20%5Cleft%20%5C%7B%202%20%5Ccdot%20x%20%5Cmid%20x%20%5Cin%20N%2C%20x%20%5Cleq%2010%20%5Cright%20%5C%7D)
+```math
+\left { 2 \cdot x \mid x \in N, x \leq 10 \right }
+```
 
 **haskell**:
 
@@ -239,7 +241,7 @@ zip [1..] "abcd" -- [(1,'a'),(2,'b'),(3,'c'),(4,'d')]
 ## Example
 
 ```hs
-let triples = [(a,b,c) | c <- [1..10], a <- [1..10], b <- [1..10]] -- (10, 8, 10), (10, 10, 10)
+let triples = [(a,b,c) | c <- [1..10], a <- [1..10], b <- [1..10]] -- [(1,1,1), (1,2,1), ..., (10, 10, 10)]
 let rightTriangles = [(a,b,c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2 ] -- [(4,3,5),(8,6,10)]
 ```
 
