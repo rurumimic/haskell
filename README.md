@@ -12,7 +12,7 @@
 ## Start GHCi
 
 ```haskell
-stack ghci
+ghci
 
 λ:
 λ: :help
@@ -23,7 +23,7 @@ stack ghci
 
 ## Contents
 
-1. [Install](install.md): stack
+1. [Install](install.md): GHCup, Stack, Cabal
 1. [function](docs/function.md), [list](docs/list.md), [ranges](docs/list.md#ranges), [comprehension](docs/list.md#list-comprehension), [tuple](docs/list.md#tuples)
 1. [type](docs/type.md), [type variable](docs/type.md#type-variable), [type class](docs/type.md#type-class)
 1. [pattern matching](docs/patternmatching.md), [guard](docs/patternmatching.md#guard), [where](docs/patternmatching.md#where), [let](docs/patternmatching.md#let), [case](docs/patternmatching.md#case)
@@ -70,3 +70,4 @@ stack ghci
 - [Yesod](https://www.yesodweb.com/): a Haskell web framework
   - [yesodweb/yesod](https://github.com/yesodweb/yesod)
   - [Book](https://www.yesodweb.com/book)
+
